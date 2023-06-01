@@ -28,3 +28,4 @@ return new Promise((res,rej)=>{
 })
 }
 window.promises.push(name,name1,name2,name3,name4);
+Promise.any(window.promises).then(res=>document.getElementById("output") = res)

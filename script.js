@@ -27,5 +27,6 @@ return new Promise((res,rej)=>{
 	setTimeout(()=>res("Hello, world!"),5000)
 })
 }
-window.promises.push(name,name1,name2,name3,name4);
-Promise.any(window.promises).then(res=>document.getElementById("output") = res)
+window.promises.push(name(),name1(),name2(),name3(),name4());
+Promise.any(window.promises).then(res=> { const outputDiv = document.getElementById('output');
+    outputDiv.textContent = res;})
